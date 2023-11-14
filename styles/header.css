@@ -1,0 +1,151 @@
+.header {
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+.container--header {
+  display: grid;
+  grid-template-areas: "logo nav btn";
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  grid-area: logo;
+  width: 120px;
+  height: 66px;
+}
+
+.menu {
+  grid-area: menu;
+  display: none;
+}
+
+.navigation {
+  grid-area: nav;
+}
+
+.navigation__list {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 40px;
+}
+
+.navigation__item {
+  font-size: 22px;
+line-height: 50px;
+  text-transform: uppercase;
+}
+
+.navigation__link:focus,
+.navigation__link:focus-visible {
+  transition: background-color 0.25s 0.05s ease, border-color 0.5s ease;
+  background-color:  var(--dark-purple)
+}
+
+.navigation__link {
+  display: block;
+  height: 100%;
+}
+
+.header__call-button {
+  grid-area: btn;
+  align-self: end;
+
+  background: none;
+  outline: none;
+  border: 3px solid var(--light-purple);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  width: 280px;
+  height: 55px;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+.header__call-button:hover,
+.header__call-button:focus {
+  border: 3px solid var(--dark-purple);
+  background: var(--dark-purple)
+}
+
+.header__call-button:active {
+  border: 1px solid var(--black);
+  background: var(--violet);
+}
+
+@media (max-width: 1150px) {
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .container--header {
+    gap: 20px;
+  }
+
+  .logo {
+    grid-area: logo;
+    width: 87px;
+    height: 55px;
+  }
+
+  .navigation__list {
+    gap: 20px;
+  }
+
+  .navigation__item {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header__call-button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    width: 229px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container--header {
+    grid-template-areas: "menu logo btn";
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    padding-top: 12px;
+  }
+
+  .menu__icon {
+    width: 54px;
+    height: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container--header {
+    grid-template-areas: "menu logo";
+  }
+
+  .logo {
+    width: 66px;
+    height: 42px;
+  }
+
+  .menu__icon {
+    width: 30px;
+    height: 20px;
+  }
+
+  .header__call-button {
+    display: none;
+  }
+}

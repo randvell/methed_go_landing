@@ -1,0 +1,16 @@
+:root {
+  --purple: #840aa3;
+  --dark-purple: #6c0287;
+  --bold-purple: #440f51;
+  --light-purple: #cd06ff;
+  --violet: #640aa3;
+  --black: #000;
+  --dark-grey: #1b1a1b;
+  --light-black: #211e1e;
+  --white: #fff;
+  --white-darkened: #eadeed;
+
+  --box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  --footer-bg: linear-gradient(180deg, #1b1a1b 0%, #370a37 100%);
+  --review-gradient: radial-gradient(50% 50% at 50% 50%, rgba(196, 196, 196, 0.00) 0%, rgba(108, 2, 135, 0.50) 100%)
+}
