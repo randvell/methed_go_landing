@@ -54,7 +54,7 @@
     </div>
   </header> -->
   <main>
-    <!-- <div class="promo" id="#promo">
+    <!-- <div class="promo" id="promo">
       <div class="container container--promo">
         <h1 class="promo__header">GAME OVER</h1>
         <p class="promo__slogan">Новый формат игр и отдыха</p>
@@ -75,7 +75,7 @@
       </div>
     </div> -->
 
-    <!-- <section class="section service" id="#service">
+    <!-- <section class="section service" id="service">
       <div class="container container--service">
         <h2 class="section__header">У нас есть всё для классного отдыха с друзьями!</h2>
         <ul class="service__list">
@@ -101,7 +101,7 @@
       </div>
     </section> -->
 
-    <section class="section room" id="#rooms">
+    <!-- <section class="section room" id="rooms">
       <div class="container">
         <h2 class="section__header">Наши залы</h2>
 
@@ -127,6 +127,33 @@
             </a>
           </li>
         </ul>
+      </div>
+    </section> -->
+
+    <section class="section booking" id="booking">
+      <div class="container">
+        <h2 class="section__header">Забронировать зал просто</h2>
+        <form class="booking__form" method="POST" action="https://jsonplaceholder.typicode.com/posts">
+          <fieldset class="booking__fieldset booking__fieldset--room">
+            <legend class="booking__legend">Выбери зал</legend>
+
+            <input class="booking__input booking__input--room" type="radio" id="room_80" name="room" 
+            value="room_80">
+            <label class="booking__label booking__label--room" for="room_80">80's vibes</label>
+
+            <input class="booking__input booking__input--room" type="radio" id="room_starwars" name="room"
+              value="star_wars">
+            <label class="booking__label booking__label--room" for="room_starwars">star wars</label>
+
+            <input class="booking__input booking__input--room" type="radio" id="room_wildwest" name="room"
+              value="wild_west">
+            <label class="booking__label booking__label--room" for="room_wildwest">wild west</label>
+
+            <input class="booking__input booking__input--room" type="radio" id="room_neon" name="room"
+              value="neon_style">
+            <label class="booking__label booking__label--room" for="room_neon">neon style</label>
+          </fieldset>
+        </form>
       </div>
     </section>
   </main>
