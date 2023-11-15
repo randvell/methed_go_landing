@@ -1,29 +1,31 @@
 .container--promo {
-  display: flex;
-  flex-direction: column;
-  align-content: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.1fr 0.5fr 1.7fr 1fr 1fr;
 
-  position: relative;
-  max-height: 850px;
+  height: 823px;
+  overflow: hidden;
 }
 
-.container--promo::after {
-  z-index: -1; /* размещаем под контентом */
+.promo__background {
+  /* размещаем под контентом */
+  z-index: -1;
+  grid-row: 1 / 6;
+  grid-column: 1 / 2;
   content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 63px;
-  right: 60px;
   background-image: url('../images/banner.png');
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  max-height: 730px;
+  height: 730px;
+  margin-top: 60px;
 }
 
 .promo__header {
-  z-index: -2; /* эффект наложения изображения на заголовок */
+  z-index: -2;
+  /* эффект наложения изображения на заголовок */
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
   font-size: 150px;
   font-weight: 900;
   line-height: 100%;
@@ -31,15 +33,19 @@
 }
 
 .promo__slogan {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
   font-size: 28px;
   line-height: 50px;
   padding-left: 100px;
-  margin-bottom: 30px;
 }
 
 .promo__text-container {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  place-self: start start;
+  place-items: end end;
   display: flex;
-  align-items: flex-end;
   gap: 43px;
 }
 
@@ -51,6 +57,7 @@
 }
 
 .promo__number {
+  display: block;
   color: var(--light-purple);
   font-size: 100px;
   font-weight: 900;
@@ -58,6 +65,7 @@
 }
 
 .promo__label {
+  display: block;
   color: var(--light-purple);
   font-size: 75px;
   font-weight: 900;
@@ -66,6 +74,10 @@
 }
 
 .promo__button--booking {
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+  place-self: end start;
+
   display: grid;
   place-content: center center;
 
@@ -95,7 +107,9 @@
 }
 
 .promo__button--down {
-  align-self: center;
+  grid-column: 1 / 2;
+  grid-row: 4 / 6;
+  place-self: center center;
 
   border: none;
   outline: none;
@@ -123,11 +137,11 @@
 
 @media (max-width: 1150px) {
   .container--promo {
-    max-height: 583px;
+    height: 583px;
   }
 
-  .container--promo::before {
-    max-height: 520px;
+  .promo__background {
+    height: 520px;
   }
 
   .promo__header {
@@ -139,10 +153,6 @@
   .promo__slogan {
     font-size: 22px;
     line-height: 30px;
-  }
-
-  .promo__text-container {
-    margin-bottom: 80px;
   }
 
   .promo__text {
@@ -165,10 +175,114 @@
     height: 64px;
     font-size: 22px;
     line-height: 30px;
+    margin-left: 40px;
   }
 
   .promo__button--down {
     width: 67px;
     height: 67px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container--promo {
+    height: 537px;
+  }
+
+  .promo__background {
+    height: 479px;
+  }
+
+  .promo__header {
+    font-size: 86px;
+    line-height: 100%;
+    letter-spacing: -8.6px;
+  }
+
+  .promo__slogan {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .promo__text-container {
+    gap: 32px;
+  }
+
+  .promo__text {
+    font-size: 16px;
+    line-height: normal;
+    max-width: 110px;
+  }
+
+  .promo__number {
+    font-size: 50px;
+    line-height: normal;
+  }
+
+  .promo__label {
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .promo__button--booking {
+    width: 214px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .promo__button--down {
+    display: none;
+  }
+}
+
+@media (max-width: 470px) {
+  .container--promo {
+    height: 204px;
+  }
+
+  .promo__background {
+    height: 179px;
+  }
+
+  .promo__header {
+    font-size: 35px;
+    line-height: 100%;
+    letter-spacing: -2.8px;
+  }
+
+  .promo__slogan {
+    font-size: 10px;
+    line-height: 14px;
+    padding-left: 20px;
+  }
+
+  .promo__text-container {
+    gap: 20px;
+  }
+
+  .promo__text {
+    font-size: 10px;
+    line-height: normal;
+    max-width: 80px;
+  }
+
+  .promo__number {
+    font-size: 26px;
+    line-height: normal;
+  }
+
+  .promo__label {
+    font-size: 22px;
+    line-height: normal;
+  }
+
+  .promo__button--booking {
+    width: 117px;
+    height: 27px;
+    font-size: 10px;
+    font-style: normal;
+    line-height: 12px;
   }
 }

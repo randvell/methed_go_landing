@@ -110,7 +110,7 @@ line-height: 50px;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .container--header {
     grid-template-areas: "menu logo btn";
   }
@@ -130,7 +130,7 @@ line-height: 50px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 470px) {
   .container--header {
     grid-template-areas: "menu logo";
   }

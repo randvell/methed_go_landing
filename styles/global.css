@@ -100,10 +100,22 @@ iframe {
 
 .container {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1300px;
   padding: 0 60px;
 }
 
 .button {
   transition: background-color 0.25s 0.05s ease, border-color 0.5s ease;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding: 0 20px;
+  }
 }
