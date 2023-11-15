@@ -1,0 +1,129 @@
+.service__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(150px, 380px));
+  gap: 40px 20px;
+  padding-bottom: 70px;
+}
+
+.service__item {
+  aspect-ratio: 380/228;
+  display: flex;
+  align-items: flex-end;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+
+  transition: transform, 400ms ease;
+}
+
+.service__item:hover {
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow)
+}
+
+.service__item:nth-child(3n + 2) {
+  transform: translate(0, 70px);
+}
+
+.service__item:nth-child(3n + 2):hover {
+  transform: scale(1.1) translate(0, 70px);
+}
+
+.service__name {
+  min-height: 56px;
+  font-weight: 700;
+  padding: 0 40px;
+  margin-bottom: 6px;
+}
+
+.service__item--vr {
+  background-image: url("../images/vr.jpg");
+}
+
+.service__item--audio {
+  background-image: url("../images/audio.jpg");
+}
+
+.service__item--karaoke {
+  background-image: url("../images/karaoke.jpg");
+}
+
+.service__item--games {
+  background-image: url("../images/game.jpg");
+}
+
+.service__item--netflix {
+  background-image: url("../images/netflix.jpg");
+}
+
+.service__item--ps {
+  background-image: url("../images/sony.jpg");
+}
+
+@media (max-width: 1150px) {
+  .service__list {
+    gap: 30px 22px;
+  }
+
+  .service__item {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .service__name {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .service__list {
+    grid-template-columns: repeat(2, minmax(135px, 334px));
+    gap: 20px;
+    padding-bottom: 0;
+  }
+
+  .service__item {
+    aspect-ratio: 334 / 208;
+  }
+
+  .service__item:nth-child(3n + 2) {
+    transform: unset;
+  }
+
+  .service__item:nth-child(3n + 2):hover {
+    transform: unset;
+  }
+
+  .service__name {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .service__list {
+    gap: 10px;
+  }
+
+  .service__item {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  .service__name {
+    min-height: 35px;
+  }
+}
+
+@media (max-width: 470px) {
+  .service__item {
+    font-size: 10px;
+    line-height: 14px
+  }
+
+  .service__name {
+    min-height: 20px;
+    padding: 0 10px;
+  }
+}
