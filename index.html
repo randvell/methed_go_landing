@@ -134,11 +134,10 @@
       <div class="container">
         <h2 class="section__header">Забронировать зал просто</h2>
         <form class="booking__form" method="POST" action="https://jsonplaceholder.typicode.com/posts">
-          <!-- <fieldset class="booking__fieldset booking__fieldset--room">
+          <fieldset class="booking__fieldset booking__fieldset--room">
             <legend class="booking__legend">Выбери зал</legend>
 
-            <input class="booking__input booking__input--room" type="radio" id="room_80" name="room" 
-            value="room_80">
+            <input class="booking__input booking__input--room" type="radio" id="room_80" name="room" value="room_80">
             <label class="booking__label booking__label--room" for="room_80">80's vibes</label>
 
             <input class="booking__input booking__input--room" type="radio" id="room_starwars" name="room"
@@ -152,9 +151,9 @@
             <input class="booking__input booking__input--room" type="radio" id="room_neon" name="room"
               value="neon_style">
             <label class="booking__label booking__label--room" for="room_neon">neon style</label>
-          </fieldset> -->
+          </fieldset>
 
-          <!-- <fieldset class="booking__fieldset booking__fieldset--services-container">
+          <fieldset class="booking__fieldset booking__fieldset--services-container">
             <legend class="booking__legend booking__fieldset--services-container">Собери набор развлечений</legend>
 
             <fieldset class="booking__fieldset booking__fieldset--services">
@@ -218,35 +217,37 @@
                 VR
               </label>
             </fieldset>
-          </fieldset> -->
+          </fieldset>
 
           <fieldset class="booking__fieldset booking__fieldset--datetime">
             <legend class="booking__legend booking__legend--datetime">Выбери дату и время</legend>
 
             <div class="booking__datetime">
-              <input class="booking__input booking__input--time booking__input--short" type="text" id="booking_time"
-                name="time" placeholder="Время" required>
-
               <input class="booking__input booking__input--date booking__input--short" type="text" id="booking_date"
                 name="date" placeholder="Дата" required>
+
+              <input class="booking__input booking__input--time booking__input--short" type="text" id="booking_time"
+                name="time" placeholder="Время" required>
             </div>
 
-            <label class="booking__label booking__label--name booking__label--above" for="booking_name">Имя
+            <label class="booking__label booking__label--name booking__label--datetime" for="booking_name">Имя
               <input class="booking__input" type="text" id="booking_name" name="name" required>
             </label>
 
-            <label class="booking__label booking__label--phone booking__label--above" for="booking_phone">Телефон
+            <label class="booking__label booking__label--phone booking__label--datetime" for="booking_phone">Телефон
               <input class="booking__input" type="text" id="booking_phone" name="phone" required>
             </label>
 
-            <input class="booking__input booking__input--qty booking__input--bottom-arrow" type="text" id="booking_qty"
-              name="person_qty" placeholder="Сколько человек" required>
+            <label class="booking__label booking__label--qty booking__label--datetime" for="booking_qty">
+              <input class="booking__input booking__input--qty booking__input--bottom-arrow" type="text"
+                id="booking_qty" name="person_qty" placeholder="Сколько человек" required>
+            </label>
 
-            <label class="booking__label booking__input--surname booking__label--above" for="booking_surname">Фамилия
+            <label class="booking__label booking__label--surname booking__label--datetime" for="booking_surname">Фамилия
               <input class="booking__input" type="text" id="booking_surname" name="surname" required>
             </label>
 
-            <label class="booking__label booking__input--email booking__label--above" for="booking_email">E-mail
+            <label class="booking__label booking__label--email booking__label--datetime" for="booking_email">E-mail
               <input class="booking__input" type="text" id="booking_email" name="email" required>
             </label>
 
