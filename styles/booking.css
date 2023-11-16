@@ -89,8 +89,9 @@
 /** room fieldset styles **/
 .booking__fieldset--room {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 250px));
-  gap: 60px;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(180px, 250px));
+  gap: 20px;
 }
 
 .booking__label--room {
@@ -141,15 +142,49 @@
 /** room fieldset styles **/
 
 @media (max-width: 1150px) {
+  .booking__fieldset--room {
+    grid-template-columns: repeat(4, minmax(150px, 220px));
+    gap: 60px;
+  }
+
   .booking__label--room {
     font-size: 20px;
     line-height: 24px;
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 900px) {
+  .booking__fieldset--room {
+    grid-template-columns: repeat(4, minmax(130px, 220px));
+    gap: 30px;
+  }
+
   .booking__label--room {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .booking__fieldset--room {
+    grid-template-columns: repeat(2, minmax(120px, 300px));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 14px 20px;
+  }
+
+  .booking__legend {
+    grid-row: 1 / 2;
+  }
+}
+
+@media (max-width: 470px) {
+  .booking__label--room {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .booking__legend {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
