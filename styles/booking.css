@@ -23,12 +23,16 @@
   margin: 0 auto 40px auto;
 }
 
+.booking__label {
+  display: flex;
+  align-items: center;
+}
+
 .booking__input[type="radio"],
 .booking__input[type="checkbox"] {
   margin-right: 12px;
   width: 27px;
   height: 27px;
-  padding: 3px;
 }
 
 .booking__input[type="text"] {
@@ -63,6 +67,7 @@
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 26px;
 
   transition: background-color 0.5s ease, border-color 300ms ease, border-width 50ms ease;
 }
@@ -86,7 +91,8 @@
   border: none;
 }
 
-/** room fieldset styles **/
+/** room fieldset styles | START **/
+
 .booking__fieldset--room {
   display: grid;
   justify-content: center;
@@ -139,7 +145,104 @@
   background: var(--white);
 }
 
-/** room fieldset styles **/
+.booking__label--above {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 16px;
+  gap: 5px;
+}
+
+/** room fieldset styles | END **/
+
+/** service fieldset styles | START **/
+
+.booking__fieldset--services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.booking__fieldset--services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+}
+
+.booking__legend--services {
+  margin: 0 0 23px 0;
+  text-align: left;
+}
+
+/** service fieldset styles | END **/
+
+/** datetime fieldset styles | START **/
+
+.booking__fieldset--datetime {
+  display: grid;
+  justify-content: space-between;
+  align-items: end;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "legend legend legend"
+    "datetime name phone"
+    "qty surname email"
+    ". . button"
+  ;
+  gap: 14px;
+}
+
+.booking__datetime {
+  grid-area: datetime;
+  display: flex;
+  gap: 34px;
+}
+
+.booking__input--short {
+  max-width: 134px;
+}
+
+.booking__legend--datetime {
+  grid-area: legend;
+}
+
+.booking__button {
+  grid-area: button;
+}
+
+.booking__label--name {
+  grid-area: name;
+}
+
+.booking__input--surname {
+  grid-area: surname;
+}
+
+.booking__label--phone {
+  grid-area: phone;
+}
+
+.booking__input--email {
+  grid-area: email;
+}
+
+.booking__input--qty {
+  grid-area: qty;
+}
+
+.booking__input--date {
+  grid-area: date;
+}
+
+.booking__input--time {
+  grid-area: time;
+}
+
+/** datetime fieldset styles | END **/
 
 @media (max-width: 1150px) {
   .booking__fieldset--room {
@@ -151,6 +254,22 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  .booking__datetime {
+    gap: 14px;
+  }
+
+  .booking__input[type="text"] {
+    width: 251px;
+  }
+
+  .booking__button {
+    width: 251px;
+  }
+
+  .booking__input--short {
+    width: 134px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -159,9 +278,20 @@
     gap: 30px;
   }
 
+  .booking__label {
+    min-width: 270px;
+  }
+
   .booking__label--room {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .booking__input[type="radio"],
+  .booking__input[type="checkbox"] {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -178,6 +308,11 @@
 }
 
 @media (max-width: 470px) {
+  .booking__label {
+    font-size: 16px;
+    line-height: normal;
+  }
+
   .booking__label--room {
     font-size: 14px;
     line-height: 18px;
@@ -186,5 +321,9 @@
   .booking__legend {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .booking__legend {
+    margin-bottom: 15px;
   }
 }

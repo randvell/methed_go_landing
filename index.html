@@ -134,7 +134,7 @@
       <div class="container">
         <h2 class="section__header">Забронировать зал просто</h2>
         <form class="booking__form" method="POST" action="https://jsonplaceholder.typicode.com/posts">
-          <fieldset class="booking__fieldset booking__fieldset--room">
+          <!-- <fieldset class="booking__fieldset booking__fieldset--room">
             <legend class="booking__legend">Выбери зал</legend>
 
             <input class="booking__input booking__input--room" type="radio" id="room_80" name="room" 
@@ -152,6 +152,105 @@
             <input class="booking__input booking__input--room" type="radio" id="room_neon" name="room"
               value="neon_style">
             <label class="booking__label booking__label--room" for="room_neon">neon style</label>
+          </fieldset> -->
+
+          <!-- <fieldset class="booking__fieldset booking__fieldset--services-container">
+            <legend class="booking__legend booking__fieldset--services-container">Собери набор развлечений</legend>
+
+            <fieldset class="booking__fieldset booking__fieldset--services">
+              <legend class="booking__legend booking__legend--services">Приставка:</legend>
+
+              <label class="booking__label" for="plaform_ps">
+                <input class="booking__input" type="radio" id="plaform_ps" name="platform" value="playstation">
+                Playstation 5
+              </label>
+
+              <label class="booking__label" for="platform_sega">
+                <input class="booking__input" type="radio" id="platform_sega" name="platform" value="sega">
+                Sega Mega Drive
+              </label>
+
+              <label class="booking__label" for="platform_xbox">
+                <input class="booking__input" type="radio" id="platform_xbox" name="platform" value="xbox">
+                X-box One S
+              </label>
+
+              <label class="booking__label" for="platform_dendy">
+                <input class="booking__input" type="radio" id="platform_dendy" name="platform" value="dendy">
+                Dendy
+              </label>
+            </fieldset>
+
+            <fieldset class="booking__fieldset booking__fieldset--services">
+              <legend class="booking__legend booking__legend--services">Настольные игры</legend>
+
+              <label class="booking__label" for="board_jenga">
+                <input class="booking__input" type="checkbox" id="board_jenga" name="board_games" value="jenga">
+                Jenga
+              </label>
+
+              <label class="booking__label" for="board_monopoly">
+                <input class="booking__input" type="checkbox" id="board_monopoly" name="board_games" value="monopoly">
+                Monopoly
+              </label>
+
+              <label class="booking__label" for="board_manchkin">
+                <input class="booking__input" type="checkbox" id="board_manchkin" name="board_games" value="manchkin">
+                Манчкин
+              </label>
+
+              <label class="booking__label" for="board_alias">
+                <input class="booking__input" type="checkbox" id="board_alias" name="board_games" value="alias">
+                Alias
+              </label>
+            </fieldset>
+
+            <fieldset class="booking__fieldset booking__fieldset--services">
+              <legend class="booking__legend booking__legend--services">Дополнительно</legend>
+
+              <label class="booking__label" for="service_karaoke">
+                <input class="booking__input" type="checkbox" id="service_karaoke" name="extra_service" value="karaoke">
+                Караоке
+              </label>
+
+              <label class="booking__label" for="service_vr">
+                <input class="booking__input" type="checkbox" id="service_vr" name="extra_service" value="VR">
+                VR
+              </label>
+            </fieldset>
+          </fieldset> -->
+
+          <fieldset class="booking__fieldset booking__fieldset--datetime">
+            <legend class="booking__legend booking__legend--datetime">Выбери дату и время</legend>
+
+            <div class="booking__datetime">
+              <input class="booking__input booking__input--time booking__input--short" type="text" id="booking_time"
+                name="time" placeholder="Время" required>
+
+              <input class="booking__input booking__input--date booking__input--short" type="text" id="booking_date"
+                name="date" placeholder="Дата" required>
+            </div>
+
+            <label class="booking__label booking__label--name booking__label--above" for="booking_name">Имя
+              <input class="booking__input" type="text" id="booking_name" name="name" required>
+            </label>
+
+            <label class="booking__label booking__label--phone booking__label--above" for="booking_phone">Телефон
+              <input class="booking__input" type="text" id="booking_phone" name="phone" required>
+            </label>
+
+            <input class="booking__input booking__input--qty booking__input--bottom-arrow" type="text" id="booking_qty"
+              name="person_qty" placeholder="Сколько человек" required>
+
+            <label class="booking__label booking__input--surname booking__label--above" for="booking_surname">Фамилия
+              <input class="booking__input" type="text" id="booking_surname" name="surname" required>
+            </label>
+
+            <label class="booking__label booking__input--email booking__label--above" for="booking_email">E-mail
+              <input class="booking__input" type="text" id="booking_email" name="email" required>
+            </label>
+
+            <button class="booking__button button" type="submit">Забронировать</button>
           </fieldset>
         </form>
       </div>
