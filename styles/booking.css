@@ -35,11 +35,44 @@
   height: 27px;
 }
 
-.booking__input[type="text"] {
+.booking__input[type="text"],
+.booking__input--picker {
   border: none;
   height: 52px;
   padding: 12px 20px;
   width: 100%;
+}
+
+.booking__input--picker {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.booking__input--picker::-webkit-calendar-picker-indicator {
+  place-self: end end;
+  display: block;
+  width: 16px;
+  background-image: url("/assets/arrow_bot.svg");
+}
+
+.booking__input--picker::-webkit-datetime-edit {
+  display: none;
+}
+
+.booking__input--picker:before {
+  color: lightgrey;
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+
+  color: #211E1E;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.booking__input--picker:focus:before {
+  content: '' !important;
 }
 
 .booking__input:focus,
@@ -307,14 +340,14 @@
     grid-template-columns: minmax(280px, 350px);
     grid-template-rows: unset;
     grid-template-areas:
-    "legend"
-    "datetime"
-    "qty"
-    "name"
-    "surname"
-    "phone"
-    "email"
-    "button"
+      "legend"
+      "datetime"
+      "qty"
+      "name"
+      "surname"
+      "phone"
+      "email"
+      "button"
     ;
   }
 
