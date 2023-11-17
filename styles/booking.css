@@ -37,6 +37,7 @@
 
 .booking__input[type="text"],
 .booking__input--picker {
+  justify-self: center;
   border: none;
   height: 52px;
   padding: 12px 20px;
@@ -134,10 +135,11 @@
 }
 
 .booking__label--room {
+  justify-self: center;
   aspect-ratio: 250 / 55;
   display: grid;
   place-items: center center;
-  max-width: 250px;
+  width: 100%;
   height: 100%;
   outline: none;
   border-radius: 8px;
@@ -338,7 +340,6 @@
 
   .booking__fieldset--datetime {
     grid-template-columns: minmax(280px, 350px);
-    grid-template-rows: unset;
     grid-template-areas:
       "legend"
       "datetime"
