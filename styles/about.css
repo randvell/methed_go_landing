@@ -1,0 +1,210 @@
+.container--about {
+  display: grid;
+  grid-template-columns: minmax(250px, 600px) minmax(200px, 500px);
+  grid-template-areas:
+    "header header"
+    "image description"
+    "image slogan";
+  column-gap: 80px
+}
+
+.section__header--about {
+  grid-area: header;
+}
+
+.about__image {
+  grid-area: image;
+}
+
+.about__description {
+  grid-area: description;
+  margin-bottom: 48px;
+}
+
+.slogan {
+  grid-area: slogan;
+  display: grid;
+  margin: 0;
+}
+
+.slogan__name {
+  display: block;
+}
+
+.slogan__text-container {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    "quote text"
+    "quote text";
+  font-size: 44px;
+  line-height: 50px;
+  margin-bottom: 39px;
+  column-gap: 10px;
+}
+
+.slogan__text-container::before {
+  grid-area: quote;
+  display: block;
+  content: "“ ";
+  color: var(--dark-purple);
+  font-weight: 900;
+  font-size: 44px;
+}
+
+.slogan__paragraph:first-child {
+  padding-top: 10px;
+}
+
+.slogan__paragraph:last-child::after {
+  content: " ”";
+  color: var(--dark-purple);
+  font-weight: 900;
+  font-size: 44px;
+}
+
+.slogan__figure {
+  place-self: end end;
+  display: flex;
+  gap: 30px;
+}
+
+.slogan__avatar {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 -10px;
+}
+
+.slogan__author {
+  max-width: 280px;
+}
+
+.about__text-block {
+  margin-bottom: 59px;
+}
+
+.about__paragraph:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.about__image {
+  aspect-ratio: 1 / 1;
+  transition: transform 200ms ease;
+}
+
+.about__image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1150px) {
+  .container--about {
+    column-gap: 40px
+  }
+
+  .slogan__text-container,
+  .slogan__text-container::before,
+  .slogan__paragraph:last-child::after {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .slogan__avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .slogan__author {
+    max-width: 220px;
+    line-height: 26px;
+  }
+
+  .about__description {
+    margin-bottom: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container--about {
+    grid-template-areas:
+      "header header"
+      "image description"
+      "slogan slogan";
+    align-items: center;
+    column-gap: 28px;
+    row-gap: 30px;
+  }
+
+  .slogan__text-container,
+  .slogan__text-container::before,
+  .slogan__paragraph:last-child::after {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .section__header--about {
+    margin-bottom: 0;
+  }
+
+  .slogan__text-container {
+    margin-bottom: 20px;
+  }
+
+  .slogan__author {
+    max-width: 210px;
+  }
+
+  .about__description {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .container--about {
+    justify-content: center;
+    grid-template-columns: unset;
+    grid-template-areas:
+      "header"
+      "description"
+      "image"
+      "slogan";
+    row-gap: 15px;
+  }
+
+  .slogan__text-container,
+  .slogan__text-container::before,
+  .slogan__paragraph:last-child::after {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .slogan__text-container {
+    margin-bottom: 12px;
+    gap: 5px;
+  }
+
+  .slogan__author {
+    max-width: 200px;
+    line-height: 16px;
+  }
+
+  .about__paragraph:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .slogan__paragraph:first-child {
+    padding-top: 7px;
+  }
+
+  .slogan__figure {
+    place-self: unset;
+    gap: 11px;
+  }
+
+  .slogan__avatar {
+    width: 56px;
+    height: 56px;
+  }
+}
