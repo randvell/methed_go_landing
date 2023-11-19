@@ -19,6 +19,19 @@
 .menu {
   grid-area: menu;
   display: none;
+  color: var(--dark-purple)
+}
+
+.menu:hover {
+  color: var(--purple);
+}
+
+.menu:focus {
+  color: var(--purple);
+}
+
+.menu__close-icon {
+  display: none;
 }
 
 .navigation {
@@ -33,14 +46,14 @@
 
 .navigation__item {
   font-size: 22px;
-line-height: 50px;
+  line-height: 50px;
   text-transform: uppercase;
 }
 
 .navigation__link:focus,
 .navigation__link:focus-visible {
   transition: background-color 0.25s 0.05s ease, border-color 0.5s ease;
-  background-color:  var(--dark-purple)
+  background-color: var(--dark-purple)
 }
 
 .navigation__link {
@@ -74,6 +87,21 @@ line-height: 50px;
 .header__call-button:active {
   border: 1px solid var(--black);
   background: var(--violet);
+}
+
+.back {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.back__link {
+  display: flex;
+  gap: 10px;
+
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 @media (max-width: 1150px) {
@@ -121,9 +149,9 @@ line-height: 50px;
 
   .menu {
     display: block;
-    padding-top: 12px;
   }
 
+  .menu__close-icon,
   .menu__icon {
     width: 54px;
     height: 29px;
@@ -140,6 +168,7 @@ line-height: 50px;
     height: 42px;
   }
 
+  .menu__close-icon,
   .menu__icon {
     width: 30px;
     height: 20px;
