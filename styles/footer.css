@@ -59,7 +59,6 @@
 
 .footer__copyright {
   grid-area: copyright;
-  place-self: center center;
 }
 
 .footer__designer-block {
@@ -132,6 +131,10 @@
       "map map"
       "copyright designer";
     grid-template-columns: minmax(100px, 440px) minmax(150px, 680px);
+  }
+
+  .section__header--footer {
+    margin-bottom: 5px;
   }
 
   .address__element {

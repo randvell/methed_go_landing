@@ -22,12 +22,10 @@
 }
 
 .rooms__link {
-  display: inline-block;
-  max-width: 252px;
-
-  font-size: 70px;
+  max-width: 150px;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 120%;
   text-transform: uppercase;
 }
 
@@ -47,36 +45,18 @@
   background-image: url('../../images/room_neon_style.jpg');
 }
 
-@media (max-width: 1150px) {
-  .rooms__link {
-    font-size: 50px;
-    line-height: 60px;
-  }
-}
-
 @media (max-width: 900px) {
   .rooms__link {
-    font-size: 40px;
-    line-height: 50px;
-    max-width: 130px;
-  }
-}
-
-@media (max-width: 700px) {
-  .rooms__link {
-    font-size: 30px;
-    line-height: 39px;
+    font-size: 20px;
+    line-height: 120%; 
+    max-width: 100px;
+    gap: 8px;
   }
 }
 
 @media (max-width: 470px) {
   .rooms__list {
-    grid-template-columns: minmax(150px, 580px);
-    gap: 10px;
-  }
-
-  .rooms__link {
-    font-size: 26px;
-    line-height: 34px;
+    grid-template-columns: minmax(200px, 580px);
+    gap: 5px;
   }
 }

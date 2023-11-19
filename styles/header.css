@@ -136,6 +136,10 @@
     width: 229px;
     height: 45px;
   }
+
+  .back {
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -155,6 +159,15 @@
   .menu__icon {
     width: 54px;
     height: 29px;
+  }
+
+  .back {
+    padding-top: 40px;
+  }
+
+  .back__link {
+    font-size: 16px;
+    line-height: 28px;
   }
 }
 
@@ -176,5 +189,15 @@
 
   .header__call-button {
     display: none;
+  }
+
+  .back {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .back__link {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

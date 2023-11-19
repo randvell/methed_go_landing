@@ -1,0 +1,69 @@
+.header {
+  margin-bottom: 0;
+}
+
+.promo {
+  padding-top: 0;
+}
+
+.promo__block {
+  display: grid;
+  height: 750px;
+  background: rgba(0, 0, 0, 50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
+}
+
+.promo__block--80 {
+  background-image: url('../../images/promo_80s.jpg');
+}
+
+.promo__block--neon {
+  background-image: url('../../images/promo_neon.jpg');
+}
+
+.promo__block--wild-west {
+  background-image: url('../../images/promo_wild-west.jpg');
+}
+
+.promo__block--star-wars {
+  background-image: url('../../images/promo_star-wars.jpg');
+}
+
+.promo__text {
+  place-self: center center;
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1150px) {
+  .promo__block {
+    height: 534px;
+  }
+}
+
+@media (max-width: 900px) {
+  .promo__block {
+    height: 402px;
+  }
+
+  .promo__text {
+    font-size: 60px;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 470px) {
+  .promo__block {
+    height: 168px;
+  }
+
+  .promo__text {
+    font-size: 30px;
+    line-height: 120%;
+  }
+}

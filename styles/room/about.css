@@ -1,0 +1,27 @@
+.about__text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 0 90px;
+}
+
+@media (max-width: 1150px) {
+  .about__text {
+    font-size: 20px;
+    line-height: 150%;
+    padding: 0 52px;;
+  }
+}
+
+@media (max-width: 900px) {
+  .about__text {
+    font-size: 16px;
+    line-height: 150%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 470px) {
+
+}

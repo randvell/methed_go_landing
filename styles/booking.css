@@ -63,7 +63,7 @@
 
 .booking__input--picker:before {
   color: lightgrey;
-  content: attr(placeholder) !important;
+  content: attr(data-placeholder) !important;
   margin-right: 0.5em;
 
   color: #211E1E;

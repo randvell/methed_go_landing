@@ -1,0 +1,70 @@
+.container--service {
+  display: grid;
+  grid-template-columns: minmax(200px, 600px) minmax(150px, 500px);
+  grid-template-areas:
+    "header header"
+    "image description"
+    "image sloan";
+  column-gap: 80px
+}
+
+.section__header--service {
+  grid-area: header;
+}
+
+.service__image {
+  aspect-ratio: 600 / 424;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service__image--80 {
+  background-image: url('../../images/room_80s.jpg');
+}
+
+.service__image--neon {
+  background-image: url('../../images/room_neon_style.jpg');
+}
+
+.service__image--wild-west {
+  background-image: url('../../images/room_wild_west.jpg');
+}
+
+.service__image--star-wars {
+  background-image: url('../../images/room_star_wars.jpg');
+}
+
+.service__description {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 15px;
+}
+
+@media (max-width: 1150px) {
+  .container--service {
+    column-gap: 30px
+  }
+}
+
+@media (max-width: 900px) {
+  .container--service {
+    column-gap: 46px
+  }
+}
+
+@media (max-width: 900px) {
+  .container--service {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 470px) {
+  .container--service {
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+  }
+}
