@@ -85,7 +85,7 @@
   }
 
   .reviews__element {
-    grid-template-columns: minmax(153px, 172px) minmax(250px, 515px);
+    grid-template-columns: 153px minmax(250px, 515px);
     gap: 15px;
   }
 

@@ -66,6 +66,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 100px;
+  width: 100%;
 }
 
 .footer__designer-block {
@@ -140,17 +141,22 @@
 @media (max-width: 900px) {
   .container--footer {
     justify-items: center;
+    grid-template-columns: unset;
     grid-template-areas:
       "header header"
       "address address"
       "social social"
       "map map"
-      "copyright designer";
-    grid-template-columns: minmax(100px, 440px) minmax(150px, 680px);
+      "copyright copyright";
   }
 
   .section__header--footer {
+    padding-top: 5px;
     margin-bottom: 5px;
+  }
+
+  .address__list {
+    gap: 25px;
   }
 
   .address__element {
@@ -174,9 +180,13 @@
     max-height: 26px;
   }
 
+  .copyright {
+    padding-top: 60px;
+  }
+
   .footer__map {
-    aspect-ratio: 668 / 337;
     max-height: 337px;
+    height: 337px;
   }
 }
 
@@ -190,7 +200,6 @@
       "social"
       "map"
       "copyright"
-      "designer"
     ;
     grid-template-columns: 1fr;
     gap: 10px;

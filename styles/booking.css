@@ -288,6 +288,10 @@
     margin: 0 auto 30px;
   }
 
+  .booking__legend--services {
+    margin: 0;
+  }
+
   .booking__legend--datetime,
   .booking__legend--services {
     margin-bottom: 20px;
@@ -306,6 +310,21 @@
 }
 
 @media (max-width: 900px) {
+  .booking {
+    margin-top: 30px;
+  }
+
+  .section__header--booking {
+    margin-bottom: 45px;
+  }
+
+  .booking__fieldset--services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
   .booking__fieldset--room {
     grid-template-columns: repeat(4, minmax(130px, 220px));
     gap: 30px;

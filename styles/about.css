@@ -45,6 +45,7 @@
   line-height: 50px;
   margin-bottom: 39px;
   column-gap: 10px;
+  text-transform: uppercase;
 }
 
 .slogan__text-container::before {
@@ -88,6 +89,10 @@
 
 .about__text-block {
   margin-bottom: 59px;
+}
+
+.slogan__full {
+  display: block;
 }
 
 .about__paragraph:not(:last-child) {
@@ -136,14 +141,19 @@
 }
 
 @media (max-width: 900px) {
+  .about {
+    padding-top: 60px;
+  }
+
   .container--about {
+    grid-template-columns: 1fr 0.75fr;
     grid-template-areas:
       "header header"
       "image description"
       "slogan slogan";
     align-items: center;
     column-gap: 28px;
-    row-gap: 30px;
+    row-gap: 40px;
   }
 
   .slogan__text-container,
@@ -159,6 +169,14 @@
 
   .slogan__text-container {
     margin-bottom: 20px;
+  }
+
+  .slogan__paragraph {
+    display: none;
+  }
+
+  .slogan__full {
+    display: block;
   }
 
   .slogan__author {

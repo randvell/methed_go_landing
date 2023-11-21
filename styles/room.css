@@ -55,10 +55,15 @@
 }
 
 @media (max-width: 900px) {
+  .section__header--rooms {
+    margin-bottom: 35px;
+  }
+  
   .room__link {
     font-size: 40px;
     line-height: 50px;
     max-width: 130px;
+    padding-top: 15px;
   }
 }
 

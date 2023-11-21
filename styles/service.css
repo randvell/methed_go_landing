@@ -88,13 +88,9 @@
 
 @media (max-width: 900px) {
   .service__list {
-    grid-template-columns: repeat(2, minmax(135px, 334px));
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     padding-bottom: 0;
-  }
-
-  .service__item {
-    aspect-ratio: 334 / 208;
   }
 
   .service__item:nth-child(3n + 2) {
