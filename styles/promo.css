@@ -135,7 +135,12 @@
 }
 
 @media (max-width: 1150px) {
+  .promo {
+    margin-bottom: 10px;
+  }
+
   .container--promo {
+    grid-template-rows: 0.9fr 0.5fr 1.8fr 1.2fr 1fr;
     height: 583px;
   }
 
@@ -149,7 +154,13 @@
     letter-spacing: -12px;
   }
 
+  .promo__text-container {
+    place-self: center start;
+    gap: 0;
+  }
+
   .promo__slogan {
+    place-self: center start;
     font-size: 22px;
     line-height: 30px;
   }

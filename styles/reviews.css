@@ -56,9 +56,13 @@
 }
 
 @media (max-width: 1150px) {
+  .section__header--reviews {
+    margin-bottom: 20px;
+  }
+
   .reviews__list {
     gap: 40px;
-    padding: 0 100px 0 80px;
+    padding: 0 100px;
   }
 
   .reviews__element {

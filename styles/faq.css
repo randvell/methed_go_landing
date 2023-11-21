@@ -53,6 +53,14 @@
 }
 
 @media (max-width: 1150px) {
+  .section__header--faq {
+    margin-bottom: 27px;
+  }
+
+  .faq__list {
+    gap: 16px;
+  }
+
   .faq__element {
     height: 70px;
     font-size: 20px;

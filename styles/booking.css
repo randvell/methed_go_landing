@@ -221,7 +221,7 @@
   display: grid;
   justify-content: center;
   align-items: end;
-  grid-template-columns: minmax(200px, 300px) minmax(200px, 280px) minmax(200px, 300px);
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "legend legend legend"
     "datetime name phone"
@@ -276,6 +276,23 @@
 /** datetime fieldset styles | END **/
 
 @media (max-width: 1150px) {
+  .booking {
+    padding: 45px 0;
+  }
+
+  .booking__fieldset--services-container {
+    justify-content: space-between;
+  }
+
+  .booking__legend {
+    margin: 0 auto 30px;
+  }
+
+  .booking__legend--datetime,
+  .booking__legend--services {
+    margin-bottom: 20px;
+  }
+
   .booking__fieldset--room {
     grid-template-columns: repeat(4, minmax(150px, 220px));
     gap: 60px;

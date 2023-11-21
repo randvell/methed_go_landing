@@ -108,6 +108,15 @@
 }
 
 @media (max-width: 1150px) {
+  .section__header--footer {
+    margin-bottom: 0;
+  }
+
+  .container--footer {
+    gap: 25px;
+    grid-template-columns: 0.6fr 1fr;
+  }
+
   .address {
     font-size: 24px;
     line-height: 28px;
@@ -124,7 +133,7 @@
   }
 
   .copyright {
-    padding-top: 45px;
+    padding-top: 100px;
   }
 }
 
