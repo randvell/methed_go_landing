@@ -8,13 +8,15 @@
     "header header"
     "address map"
     "social map"
-    "copyright designer";
-  grid-template-columns: minmax(300px, 440px) minmax(450px, 680px);
+    "copyright copyright";
+  grid-template-columns: 0.7fr 1fr;
   gap: 35px;
+  width: 100%;
 }
 
 .section__header--footer {
   grid-area: header;
+  margin-bottom: 10px;
 }
 
 .address {
@@ -33,6 +35,7 @@
 
 .address__element {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 
@@ -57,21 +60,26 @@
   transform: scale(1.1);
 }
 
-.footer__copyright {
+.copyright {
   grid-area: copyright;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
 }
 
 .footer__designer-block {
   grid-area: designer;
 }
 
-.footer__copyright,
-.footer__designer-block {
-  padding-top: 65px;
-}
-
 .footer__designer {
   text-align: right;
+}
+
+.footer__copyright,
+.footer__designer {
+  font-size: 14px;
+  line-height: 16px;
   padding-bottom: 3px;
 }
 
@@ -115,8 +123,7 @@
     height: 40px;
   }
 
-  .footer__copyright,
-  .footer__designer-block {
+  .copyright {
     padding-top: 45px;
   }
 }
@@ -199,15 +206,12 @@
     text-align: center;
   }
 
-  .footer__copyright {
+  .copyright {
     margin-bottom: 10px;
+    padding-top: 10px;
   }
 
   .footer__designer-block {
     padding-top: 0;
-  }
-
-  .footer__copyright {
-    padding-top: 10px;
   }
 }

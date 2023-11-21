@@ -1,7 +1,7 @@
 .container--promo {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.1fr 0.5fr 1.7fr 1fr 1fr;
+  grid-template-rows: 0.9fr 0.5fr 1.8fr 1fr 1fr;
 
   height: 823px;
   overflow: hidden;
@@ -17,7 +17,6 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
-  height: 730px;
   margin-top: 60px;
 }
 

@@ -1,3 +1,7 @@
+.about {
+  padding-top: 100px;
+}
+
 .container--about {
   display: grid;
   grid-template-columns: minmax(250px, 600px) minmax(200px, 500px);

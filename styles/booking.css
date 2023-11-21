@@ -129,7 +129,7 @@
 
 .booking__fieldset--room {
   display: grid;
-  justify-content: center;
+  justify-content: space-between;
   grid-template-columns: repeat(4, minmax(180px, 250px));
   gap: 20px;
 }
@@ -197,7 +197,7 @@
 .booking__fieldset--services-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   column-gap: 32px;
 }
 

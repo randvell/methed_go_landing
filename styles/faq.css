@@ -65,6 +65,10 @@
     color: var(--bold-purple);
   }
 
+  .faq__element:nth-child(n + 5) {
+    display: none;
+  }
+
   .faq__element:nth-child(even)::after {
     content: url("../assets/open_purple.svg");
   }
