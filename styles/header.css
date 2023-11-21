@@ -196,4 +196,8 @@
     font-size: 12px;
     line-height: 16px;
   }
+  
+  .back__icon {
+    width: 16px;
+  }
 }

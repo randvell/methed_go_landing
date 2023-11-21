@@ -1,6 +1,6 @@
 .container--service {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   grid-template-areas:
     "header header"
     "image description"
@@ -58,13 +58,34 @@
 
 @media (max-width: 900px) {
   .container--service {
-    gap: 15px;
+    column-gap: 46px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service__image {
+    aspect-ratio: unset;
+    height: 326px;
+  }
+}
+
+@media (max-width: 700px) {
+  .service__image {
+    height: 180px;
   }
 }
 
 @media (max-width: 470px) {
+  .section__header--service {
+    margin-bottom: 0;
+  }
+
   .container--service {
-    grid-template-columns: unset;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "image"
+    "description";
     grid-auto-flow: column;
+    gap: 15px
   }
 }
