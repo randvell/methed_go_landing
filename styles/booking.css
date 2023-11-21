@@ -130,7 +130,7 @@
 .booking__fieldset--room {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: repeat(4, minmax(180px, 250px));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -326,7 +326,7 @@
   }
 
   .booking__fieldset--room {
-    grid-template-columns: repeat(4, minmax(130px, 220px));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
   }
 
@@ -348,7 +348,7 @@
 
   .booking__fieldset--datetime {
     justify-content: space-between;
-    grid-template-columns: minmax(200px, 280px) minmax(200px, 300px);
+    grid-template-columns: 1fr 1.1fr;
     grid-template-areas:
       "legend legend"
       "datetime qty"
@@ -376,6 +376,7 @@
 
   .booking__fieldset--datetime {
     grid-template-columns: minmax(280px, 350px);
+    justify-content: center;
     grid-template-areas:
       "legend"
       "datetime"
@@ -400,6 +401,27 @@
 }
 
 @media (max-width: 470px) {
+  .booking {
+    margin-top: 15px;
+    padding: 30px 0;
+  }
+
+  .section__header--booking {
+    margin-bottom: 15px;
+  }
+
+  .booking__fieldset--services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .booking__fieldset--services {
+    margin: 0;
+  }
+
+  .booking__fieldset--services {
+    gap: 15px;
+  }
+
   .booking__label {
     font-size: 16px;
     line-height: normal;
@@ -418,4 +440,12 @@
   .booking__legend {
     margin-bottom: 15px;
   }
+
+  .booking__input[type="radio"],
+  .booking__input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
 }

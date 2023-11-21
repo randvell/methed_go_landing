@@ -1,6 +1,6 @@
 .container--service {
   display: grid;
-  grid-template-columns: minmax(200px, 600px) minmax(150px, 500px);
+  grid-template-columns: 1.1fr 1fr;
   grid-template-areas:
     "header header"
     "image description"

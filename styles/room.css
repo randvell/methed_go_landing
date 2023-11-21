@@ -75,6 +75,10 @@
 }
 
 @media (max-width: 470px) {
+  .section__header--rooms {
+    margin-bottom: 15px;
+  }
+
   .room__list {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -83,5 +87,6 @@
   .room__link {
     font-size: 26px;
     line-height: 34px;
+    padding-top: 0;
   }
 }

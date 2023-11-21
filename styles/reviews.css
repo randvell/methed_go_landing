@@ -85,7 +85,7 @@
   }
 
   .reviews__element {
-    grid-template-columns: 153px minmax(250px, 515px);
+    grid-template-columns: 153px 1fr;
     gap: 15px;
   }
 
@@ -108,12 +108,16 @@
 
 @media (max-width: 470px) {
   .reviews__list {
-    gap: 20px;
     padding: 0;
   }
 
+  .reviews__author {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   .reviews__figure {
-    gap: 9px;
+    gap: 0;
   }
 
   .reviews__img,

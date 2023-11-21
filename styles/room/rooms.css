@@ -56,7 +56,7 @@
 
 @media (max-width: 470px) {
   .rooms__list {
-    grid-template-columns: minmax(200px, 580px);
+    grid-template-columns: 1fr;
     gap: 5px;
   }
 }

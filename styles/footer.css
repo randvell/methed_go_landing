@@ -202,21 +202,40 @@
       "copyright"
     ;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0px;
+  }
+
+  .section__header--footer {
+    padding-top: 0;
+    margin-bottom: 10px;
   }
 
   .address {
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 10px;
   }
 
   .address__list {
-    gap: 10px
+    gap: 0;
+  }
+
+  .address__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social__item {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social {
+    margin-bottom: 40px;
   }
 
   .footer__map {
     height: 194px;
-    padding-top: 25px;
     margin-bottom: 50px;
   }
 
@@ -225,11 +244,18 @@
   }
 
   .copyright {
+    flex-direction: column;
     margin-bottom: 10px;
     padding-top: 10px;
   }
 
   .footer__designer-block {
     padding-top: 0;
+  }
+
+  .footer__copyright,
+  .footer__designer {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

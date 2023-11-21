@@ -99,9 +99,23 @@
 }
 
 @media (max-width: 580px) {
+  .section__header--faq {
+    margin-bottom: 15px;
+  }
+
+  .faq__list {
+    gap: 10px;
+  }
+
   .faq__element {
     font-size: 12px;
     line-height: 16px;
     padding: 0 13px 0 10px;
+    height: 46px;
+  }
+
+  .faq__element::after {
+    padding: 8px 0;
+    width: 30px;
   }
 }

@@ -4,7 +4,7 @@
 
 .container--about {
   display: grid;
-  grid-template-columns: minmax(250px, 600px) minmax(200px, 500px);
+  grid-template-columns: 1fr 0.9fr;
   grid-template-areas:
     "header header"
     "image description"
@@ -87,12 +87,12 @@
   max-width: 280px;
 }
 
-.about__text-block {
-  margin-bottom: 59px;
+.slogan__brand {
+  display: block;
 }
 
-.slogan__full {
-  display: block;
+.about__text-block {
+  margin-bottom: 59px;
 }
 
 .about__paragraph:not(:last-child) {
@@ -171,12 +171,12 @@
     margin-bottom: 20px;
   }
 
-  .slogan__paragraph {
-    display: none;
+  .slogan__brand {
+    display: inline-block;
   }
 
-  .slogan__full {
-    display: block;
+  .slogan__paragraph {
+    max-width: 650px;;
   }
 
   .slogan__author {
@@ -189,6 +189,10 @@
 }
 
 @media (max-width: 580px) {
+  .about {
+    padding-top: 30px;
+  }
+
   .container--about {
     justify-content: center;
     grid-template-columns: unset;
@@ -218,7 +222,7 @@
   }
 
   .about__paragraph:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 17px;
   }
 
   .slogan__paragraph:first-child {
