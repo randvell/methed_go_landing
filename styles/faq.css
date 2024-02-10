@@ -5,19 +5,8 @@
 }
 
 .faq__element {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-
-  height: 87px;
   background-color: var(--white);
   color: var(--dark-grey);
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  padding: 0 70px;
 }
 
 .faq__element:nth-child(even) {
@@ -25,31 +14,60 @@
   color: var(--white);
 }
 
-.faq__element::after {
-  content: url("../assets/open_purple.svg");
+.faq__button {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  color: inherit;
+  height: 87px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 0 70px;
+}
+
+.faq__text-wrapper {
+  height: 0;
+  overflow: hidden;
+  background-color: var(--white);
+  color: var(--dark-grey);
+}
+
+.faq__element--active .faq__text-wrapper {
+  height: auto;
+  padding: 60px 70px 60px 70px;
+}
+
+.faq__button::after {
+  content: url('../assets/open_purple.svg');
   display: inline-block;
   width: 46px;
   height: 46px;
 }
 
-.faq__element:hover::after {
-  content: url("../assets/open_purple_hover.svg");
+.faq__button:hover::after {
+  content: url('../assets/open_purple_hover.svg');
 }
 
-.faq__element:active::after {
-  content: url("../assets/open_purple_active.svg");
+.faq__button:active::after,
+.faq__element--active .faq__button::after {
+  content: url('../assets/open_purple_active.svg');
 }
 
-.faq__element:nth-child(even)::after {
-  content: url("../assets/open.svg");
+.faq__element:nth-child(even) .faq__button::after {
+  content: url('../assets/open.svg');
 }
 
-.faq__element:nth-child(even):hover::after {
-  content: url("../assets/open_hover.svg");
+.faq__element:nth-child(even):hover .faq__button::after {
+  content: url('../assets/open_hover.svg');
 }
 
-.faq__element:nth-child(even):active::after {
-  content: url("../assets/open_active.svg");
+.faq__element:nth-child(even):active .faq__button::after,
+.faq__element:nth-child(even).faq__element--active .faq__button::after {
+  content: url('../assets/open_active.svg');
 }
 
 @media (max-width: 1150px) {
@@ -62,31 +80,18 @@
   }
 
   .faq__element {
-    height: 70px;
     font-size: 20px;
     line-height: 24px;
     padding: 0 20px 0 25px;
   }
 
+  .faq__button {
+    height: 70px;
+  }
+
   .faq__element:nth-child(even) {
     background-color: var(--white);
     color: var(--bold-purple);
-  }
-
-  .faq__element:nth-child(n + 5) {
-    display: none;
-  }
-
-  .faq__element:nth-child(even)::after {
-    content: url("../assets/open_purple.svg");
-  }
-
-  .faq__element:nth-child(even):hover::after {
-    content: url("../assets/open_purple_hover.svg");
-  }
-
-  .faq__element:nth-child(even):active::after {
-    content: url("../assets/open_purple_active.svg");
   }
 }
 
@@ -111,9 +116,15 @@
     font-size: 12px;
     line-height: 16px;
     padding: 0 13px 0 10px;
+  }
+
+  .faq__button {
     height: 46px;
   }
 
+  .faq__element:nth-child(even)::after,
+  .faq__element:nth-child(even):hover::after,
+  .faq__element:nth-child(even):active::after,
   .faq__element::after {
     padding: 8px 0;
     width: 30px;
