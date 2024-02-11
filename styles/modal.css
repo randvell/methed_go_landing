@@ -1,0 +1,107 @@
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: rgba(27, 26, 27, 0.7);
+}
+
+.overlay--visible {
+  display: block;
+}
+
+.modal {
+  background: rgb(68, 15, 81);
+  position: absolute;
+  width: 600px;
+  height: 498px;
+  left: 30%;
+  top: 100px;
+}
+
+.modal__heading {
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+  padding-top: 60px;
+}
+
+.modal__close {
+  position: absolute;
+  border: none;
+  background-image: url('../assets/cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 20px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+}
+
+.button--modal-submit {
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  color: rgb(108, 2, 135);
+  font-family: Arial;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 5px white;
+}
+
+.modal__close::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid white;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal__close:hover::before {
+  opacity: 1;
+}
+
+.modal__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 16px;
+  gap: 5px;
+}
+
+.modal__input {
+  border: none;
+  height: 52px;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.modal__fieldset {
+  display: grid;
+  justify-content: center;
+  gap: 40px;
+}

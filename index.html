@@ -11,6 +11,78 @@
   </head>
 
   <body>
+    <div class="overlay">
+      <div class="modal">
+        <button class="modal__close" type="button" data-close>
+          <svg
+            width="42.000000"
+            height="42.000000"
+            viewBox="0 0 42 42"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect
+              id="Rectangle 59"
+              y="38.440674"
+              rx="2.000000"
+              width="54.363235"
+              height="5.033633"
+              transform="rotate(-45 0.000000 38.440674)"
+              fill="#FFFFFF"
+              fill-opacity="1.000000"
+            />
+            <rect
+              id="Rectangle 60"
+              x="3.559570"
+              rx="2.000000"
+              width="54.363235"
+              height="5.033633"
+              transform="rotate(45 3.559570 0.000000)"
+              fill="#FFFFFF"
+              fill-opacity="1.000000"
+            />
+          </svg>
+        </button>
+        <div class="container container--modal">
+          <h2 class="modal__heading">Заказать звонок</h2>
+          <form
+            class="form"
+            method="POST"
+            action="https://jsonplaceholder.typicode.com/posts"
+            name="call_modal"
+          >
+            <fieldset class="modal__fieldset">
+              <label class="modal__label" for="modal__name"
+                >Имя
+                <input
+                  class="modal__input"
+                  type="text"
+                  id="modal_name"
+                  name="modal_name"
+                  required
+                />
+              </label>
+
+              <label class="modal__label" for="modal__phone"
+                >Телефон
+                <input
+                  class="modal__input"
+                  type="text"
+                  id="modal__phone"
+                  name="modal__phone"
+                  required
+                />
+              </label>
+
+              <button class="button button--modal-submit" type="submit">
+                Позвонить мне
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="container container--header">
         <div class="menu">

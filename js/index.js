@@ -1,3 +1,4 @@
 import { accordion } from './modules/accordion.js';
+import {} from './modules/modal.js';
 
-document.addEventListener('');
+// todo: навешать событие загрузки
