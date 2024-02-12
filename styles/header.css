@@ -3,8 +3,10 @@
 }
 
 .container--header {
+  position: relative;
+  z-index: 100;
   display: grid;
-  grid-template-areas: "logo nav btn";
+  grid-template-areas: 'logo nav btn';
   justify-content: space-between;
   align-items: center;
 }
@@ -18,7 +20,7 @@
 .menu {
   grid-area: menu;
   display: none;
-  color: var(--dark-purple)
+  color: var(--dark-purple);
 }
 
 .menu:hover {
@@ -33,6 +35,14 @@
   display: none;
 }
 
+.menu--open .menu__close-icon {
+  display: block;
+}
+
+.menu--open .menu__icon {
+  display: none;
+}
+
 .navigation {
   grid-area: nav;
 }
@@ -40,7 +50,7 @@
 .navigation__list {
   display: grid;
   grid-auto-flow: column;
-  gap: 40px;
+  column-gap: 40px;
 }
 
 .navigation__item {
@@ -52,7 +62,7 @@
 .navigation__link:focus,
 .navigation__link:focus-visible {
   transition: background-color 0.25s 0.05s ease, border-color 0.5s ease;
-  background-color: var(--dark-purple)
+  background-color: var(--dark-purple);
 }
 
 .navigation__link {
@@ -81,7 +91,7 @@
 .header__call-button:hover,
 .header__call-button:focus {
   border: 3px solid var(--dark-purple);
-  background: var(--dark-purple)
+  background: var(--dark-purple);
 }
 
 .header__call-button:active {
@@ -106,7 +116,7 @@
 
 @media (max-width: 1150px) {
   .container--header {
-    gap: 20px;
+    column-gap: 20px;
   }
 
   .logo {
@@ -140,21 +150,35 @@
 
 @media (max-width: 900px) {
   .container--header {
-    grid-template-areas: "menu logo btn";
+    grid-template-areas:
+      'menu logo btn'
+      'nav nav nav';
   }
 
   .navigation {
     display: none;
+    padding-top: 100px;
+    background: #1b1a1b;
+  }
+
+  .navigation__list {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    padding: 58px 0;
   }
 
   .menu {
     display: block;
   }
 
+  .menu__button {
+    color: '#6C0287';
+  }
+
   .menu__close-icon,
   .menu__icon {
     width: 54px;
-    height: 29px;
   }
 
   .back {
@@ -169,7 +193,9 @@
 
 @media (max-width: 470px) {
   .container--header {
-    grid-template-areas: "menu logo";
+    grid-template-areas:
+      'menu logo'
+      'nav nav';
   }
 
   .logo {
@@ -196,7 +222,7 @@
     font-size: 12px;
     line-height: 16px;
   }
-  
+
   .back__icon {
     width: 16px;
   }

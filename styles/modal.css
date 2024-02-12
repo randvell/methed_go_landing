@@ -1,5 +1,5 @@
 .overlay {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -7,10 +7,9 @@
   width: 100%;
   z-index: 10;
   background: rgba(27, 26, 27, 0.7);
-}
+  opacity: 0;
 
-.overlay--visible {
-  display: block;
+  transition: opacity 0.3s ease;
 }
 
 .modal {
@@ -38,10 +37,6 @@
 .modal__close {
   position: absolute;
   border: none;
-  background-image: url('../assets/cross.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   top: 20px;
   right: 30px;
   width: 42px;

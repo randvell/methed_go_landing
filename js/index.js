@@ -1,4 +1,5 @@
-import { accordion } from './modules/accordion.js';
-import {} from './modules/modal.js';
+import './modules/accordion.js';
+import './modules/modal.js';
+import './modules/burger.js';
 
 // todo: навешать событие загрузки
